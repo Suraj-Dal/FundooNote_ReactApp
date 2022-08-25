@@ -1,0 +1,57 @@
+.headerhc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    border: 1px solid rgb(208, 207, 207);
+}
+.searchhc{
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgb(239, 239, 239);
+    padding-left: 10px;
+    margin-left: 3rem;
+}
+.searchhc input{
+    width: 650px;
+    height: 45px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+    font-size: large;
+    padding-left: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(239, 239, 239);
+    outline: none;
+}
+.opthc{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.userhc{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.logohc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+    font-size: larger;
+    margin-left: 1.5rem;
+}
+.logohc img{
+    margin-left: 2rem;
+}
+.logohc h4{
+    padding-left: 8px;
+}
+

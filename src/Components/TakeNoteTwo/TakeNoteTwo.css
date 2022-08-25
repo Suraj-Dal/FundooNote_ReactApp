@@ -1,0 +1,42 @@
+.takenotetwo{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.3);
+    margin-top: 3%;
+    width: 550px;
+    height: 135px;
+    justify-content: center;
+    margin-left: 30%;
+}
+.takenotetwo input{
+    width: 500px;
+    height: 45px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+    font-size: medium;
+    padding-left: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    outline: none;
+}
+.pin{
+    margin-right: 1rem;
+}
+.titletnt{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.icontnt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+.icontnt h5{
+    margin-left: 12rem;
+}

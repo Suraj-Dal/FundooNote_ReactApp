@@ -1,0 +1,30 @@
+.takeNoteOne{
+    display: flex;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.3);
+    align-items: center;
+    margin-top: 3%;
+    width: 550px;
+    height: 45px;
+    margin-left: 30%;
+}
+.takeNoteOne input{
+    width: 450px;
+    height: 43px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+    font-size: large;
+    padding-left: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    outline: none;
+}
+.imgtno{
+    display: flex;
+    gap: 2rem;
+    margin-right: 30px;
+    opacity: 0.5;
+}
+

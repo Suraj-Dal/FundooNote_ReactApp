@@ -1,0 +1,96 @@
+
+.main{
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D3D3D3;
+    border-radius: 7px;
+    justify-content: space-around;
+    margin-left: 30%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.logo{
+    margin-bottom: 10px;
+    text-align: start;
+}
+.name{
+    display: flex;
+    margin-bottom: 20px;
+    gap: 1rem;
+}
+.name input{
+    width: 170px;
+    height: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+    font-size: medium;
+}
+.email input{
+    width: 385px;
+    height: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+    font-size: medium;
+}
+.email h6{
+    margin: 10px;
+    color: #646464;
+    margin-bottom: 30px;
+}
+.password{
+    display: flex;
+    gap: 1rem;
+}
+.password input{
+    width: 170px;
+    height: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+    font-size: medium;
+}
+.pass h6{
+    margin: 10px;
+    color: #646464;
+    margin-bottom: 30px;
+}
+.check{
+    height: 18px;
+    width: 18px;
+    margin-bottom: 20px;
+}
+.button button{
+    background-color: #247cec;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+    font-size: large;
+    color: white;
+    padding: 10px 20px 8px 20px;
+    border-radius: 4px;
+    margin-left: 13rem;
+}
+.image{
+    text-align: center;
+}
+.footercontainer{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    gap: 28rem;
+    margin-left: 30%;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    font-size: small;
+}
+.footer a{
+    margin: 10px;
+}
