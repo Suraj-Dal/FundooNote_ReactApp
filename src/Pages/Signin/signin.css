@@ -1,17 +1,15 @@
-
 .mainsi{
     display: flex;
     flex-direction: column;
-    height: 80vh;
-    width: 30vw;
+    height: 90vh;
+    width:30vw;
     justify-content: center;
     align-items: center;
     border: 1px solid #D3D3D3;
     border-radius: 7px;
-    margin-left: 30%;
-    margin-top: 3%;
-    padding: 20px;
     justify-content: space-evenly;
+    margin-left: 32vw;
+    margin-top: 5vh;
 }
 .logosi{
     text-align: center;
@@ -26,12 +24,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     gap: 1rem;
-    width: 95%;
-    height: 150px;
+    width: 92%;
+    height: 20%;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 1000;
     font-size: large;
-    padding-left: 10px;
 }
 .guestsi h5{
     padding-bottom: 0;
@@ -40,6 +37,7 @@
 .buttonsi{
     margin-top: 30px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -53,6 +51,49 @@
     color: white;
     padding: 10px 20px 8px 20px;
     border-radius: 4px;
-    margin-left: 10rem;
+    margin-left: 6rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .mainsi{
+        width:100vw;
+        margin: 0;
+        border: none;
+        size: 100%;
+        align-self:center;
+    }
+    .guestsi{
+        width: 90vw;
+    }
+    .buttonsi{
+        width: 90vw;
+        justify-content: space-between;
+    }
+    .buttonsi button{
+        margin-left: 0;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px)    
+{
+    .mainsi{
+        width:80vw;
+        height: 90vh;
+        margin: 10vw;
+        margin-top: 0;
+        border: none;
+        size: 100%;
+        align-self:center;
+        border: 1px solid #D3D3D3;
+    }
+    .guestsi{
+        width: 73vw;
+    }
+    .buttonsi{
+        width: 70vw;
+        justify-content: space-between;
+    }
+    .buttonsi button{
+        margin-left: 0;
+    }
 }
 

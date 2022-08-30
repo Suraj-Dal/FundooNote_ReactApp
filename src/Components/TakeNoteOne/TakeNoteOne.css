@@ -4,14 +4,13 @@
     background-color: white;
     box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.3);
     align-items: center;
-    margin-top: 3%;
-    width: 550px;
-    height: 45px;
-    margin-left: 30%;
+    width: 43vw;
+    height: 8vh;
+    margin-left: 30vw;
 }
 .takeNoteOne input{
-    width: 450px;
-    height: 43px;
+    width: 42vw;
+    height: 8vh;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 1000;
     font-size: large;
@@ -24,7 +23,34 @@
 .imgtno{
     display: flex;
     gap: 2rem;
-    margin-right: 30px;
     opacity: 0.5;
+    align-self: center;
+    margin-right: 5%;
 }
 
+@media screen and (min-width:320px) and (max-width:768px)
+{
+    .takeNoteOne{
+        width: 70%;
+        margin-left: 20%;
+        justify-content: space-between;
+    }
+    .imgtno{
+        gap: 1rem;
+    }
+    .takeNoteOne input{
+        font-weight: 500;
+        font-size: medium;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px)
+{
+    .takeNoteOne{
+        width: 50%;
+        margin-left: 20%;
+    }
+    .takeNoteOne input{
+        font-weight: 500;
+        font-size: medium;
+    }
+}

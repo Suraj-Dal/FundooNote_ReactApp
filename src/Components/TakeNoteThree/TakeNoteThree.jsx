@@ -7,14 +7,16 @@ import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import './TakeNoteThree.css'
+import ColorPopper from "../ColorPopper/ColorPopper";
+import { setColor, setNotes } from "../../Services/DataService";
 
 function TakeNoteThree({note}) {
     const [viewNote, setViewNote] = React.useState(true)
+
     if (viewNote)
     {
         return (
-
-            <div className="takenotethree" onMouseEnter={() => setViewNote(false)}>
+            <div className="takenotethree" onMouseEnter={() => setViewNote(false)} style={{backgroundColor: note.color}}>
             <div className="notetnh">
                 <div className="titletnh">
                     <h4>{note.title}</h4>
@@ -27,7 +29,7 @@ function TakeNoteThree({note}) {
     else
     {
         return (
-            <div className="takenotethree" onMouseLeave={() => setViewNote(true)}>
+            <div className="takenotethree" onMouseLeave={() => setViewNote(true)} style={{backgroundColor: note.color}}>
             <div className="notetnh">
                 <div className="titletnh">
                     <h4>{note.title}</h4>
@@ -37,7 +39,7 @@ function TakeNoteThree({note}) {
                 <div className="icontnh">
                     <AddAlertOutlinedIcon fontSize="smaller" />
                     <PersonAddAltOutlinedIcon fontSize="smaller" />
-                    <ColorLensOutlinedIcon fontSize="smaller" />
+                    <ColorPopper action="update" id={note.noteID}/>
                     <ImageOutlinedIcon fontSize="smaller" />
                     <ArchiveOutlinedIcon fontSize="smaller" />
                     <MoreVertOutlinedIcon fontSize="smaller" />

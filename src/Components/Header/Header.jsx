@@ -9,13 +9,17 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 import './Header.css'
 
-function HeaderComp() {
+function HeaderComp(props) {
+    const handleDrawer = () =>
+    {
+        props.listenToHeader()
+    }
     return (
         <header className="headerhc">
             <div className="logohc">
-                <MenuIcon fontSize="medium" />
+                <MenuIcon fontSize="medium" onClick={handleDrawer} />
                 <img src={keep} alt="Fundoo Notes" style={{ width: "40px", height: "40px" }} />
-                <h4>Keep</h4>
+                <div>Keep</div>
             </div>
             <div className="searchhc">
                 <SearchIcon fontSize="medium" />

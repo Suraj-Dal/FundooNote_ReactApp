@@ -24,6 +24,7 @@
     display: flex;
     margin-bottom: 20px;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 .name input{
     width: 170px;
@@ -47,6 +48,7 @@
 .password{
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 .password input{
     width: 170px;
@@ -94,3 +96,59 @@
 .footer a{
     margin: 10px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px)
+{
+    .main{
+      border: none;
+      height: 130vh;
+      width: 100vw;
+      margin: 10px;
+      justify-content: flex-start;
+      margin-top: 0;
+      align-items: flex-start;
+    }
+    .image{
+        display: none;
+    }
+    .footercontainer{
+        justify-content: space-between;
+        margin: 0;
+        gap: 0;
+    }
+    .name input{
+        width: 90vw;
+    }
+    .email input{
+        width: 90vw;
+    }
+    .password input {
+        width: 90vw;
+    }
+    .button {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .main{
+        border: none;
+        align-items: flex-start;
+        width: 80vw;
+        height: 100vh;
+        margin-left: 10%;
+        margin-right: 10%;
+        justify-content: flex-start;
+    }
+    .form{
+        margin: 20px;
+    }
+    .image{
+        display: none;
+    }
+    .footercontainer{
+        display: none;
+    }
+    
+}
+    
