@@ -8,6 +8,7 @@ import AppsRoundedIcon from '@mui/icons-material/AppsRounded';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 import './Header.css'
+import {connect} from 'react-redux';
 
 function HeaderComp(props) {
     const handleDrawer = () =>
@@ -19,7 +20,7 @@ function HeaderComp(props) {
             <div className="logohc">
                 <MenuIcon fontSize="medium" onClick={handleDrawer} />
                 <img src={keep} alt="Fundoo Notes" style={{ width: "40px", height: "40px" }} />
-                <div>Keep</div>
+                <div>{props.title}</div>
             </div>
             <div className="searchhc">
                 <SearchIcon fontSize="medium" />
@@ -37,5 +38,11 @@ function HeaderComp(props) {
         </header>
     )
 }
+const mapStateToProps = (state) => {
+    console.log(state)
+	return {
+		title: state.drawerReducer.title,
+	};
+};
 
-export default HeaderComp;
+export default connect (mapStateToProps)(HeaderComp);

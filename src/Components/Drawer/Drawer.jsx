@@ -18,6 +18,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import {connect} from 'react-redux';
+
 
 const drawerWidth = 240;
 
@@ -90,7 +92,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export default function MiniDrawer(props) {
+function MiniDrawer(props) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
@@ -102,6 +104,10 @@ export default function MiniDrawer(props) {
         setOpen(false);
     };
 
+    const handleNotes = () => {
+        props.dispatch({type : "SET_Title_as_Archive"})
+    }
+
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
@@ -109,7 +115,7 @@ export default function MiniDrawer(props) {
             <Drawer variant="permanent" open={props.drawer}>
 
                 <List>
-                    <ListItem button >
+                    <ListItem button onClick={handleNotes}>
                         <ListItemIcon>
                             <img src="https://img.icons8.com/material-outlined/24/000000/light.png" style={{ width: "20px" }} />
                         </ListItemIcon>
@@ -128,3 +134,5 @@ export default function MiniDrawer(props) {
         </Box>
     );
 }
+
+export default connect()(MiniDrawer);

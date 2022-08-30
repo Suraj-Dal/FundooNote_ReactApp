@@ -2,7 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
-import { setColor } from '../../Services/DataService';
 
 export default function ColorPopper(props) {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -13,16 +12,16 @@ export default function ColorPopper(props) {
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popper' : undefined;
-    const colors = ["#2ECC71","#AF7AC5","#F1948A","#A3E4D7","#F5B7B1","#F5B041","#DC7633","#F1C40F","#AAB7B8","#F1948A","#2ECC71","#F5B041"]
+    const colors = ["LightSalmon","Pink","PapayaWhip","Khaki","Lavender","Thistle","GreenYellow","Aquamarine","BlanchedAlmond","Gainsboro","AliceBlue"]
 
-    const takeColor = async (color) => {
+    const takeColor = (color) => {
         if (props.action === "create")
         {
             props.listenToColorPopper(color)
         }
         else if (props.action === "update")
         {
-            await setColor(color, props.id)
+            props.listenToColorPopper(color)
         }
     }
 

@@ -13,7 +13,7 @@ import ColorPopper from "../ColorPopper/ColorPopper";
 import { setNotes } from "../../Services/DataService";
 
 function TakeNoteTwo() {
-    const [noteObj, setNoteObj] = useState({Title:"", Description:"", Color:"", Archive:"", Pin:""})
+    const [noteObj, setNoteObj] = useState({Title:"", Description:"", Color:"", Archive:false, Pin:false})
     const takeName = (event) => {
         setNoteObj((prevState) => ({ ...prevState, Title: event.target.value }));
     };
@@ -57,7 +57,7 @@ function TakeNoteTwo() {
                     <UndoOutlinedIcon fontSize="smaller" />
                     <RedoOutlinedIcon fontSize="smaller" />
                 </div>
-                <div className="close" onClick={onClose}>Close</div>
+                <div className="close" onClick={onClose} style={{cursor:"pointer"}}>Close</div>
             </div>
         </div>
     )

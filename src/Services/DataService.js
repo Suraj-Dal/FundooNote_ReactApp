@@ -18,8 +18,17 @@ export const setNotes = async (noteObj) => {
     return response
 }
 
-export const setColor = async (color, id) => {
-    let response = await axios.put(`https://localhost:44347/api/Notes/Color?NoteID=${id}&color=${color}`, null, header)
+export const setColor = (color, id) => {
+    let response = axios.put(`https://localhost:44347/api/Notes/Color?NoteID=${id}&color=${color}`, null, header)
     console.log(response)
     return response
+}
+
+export const setArchive = (id) => {
+    let response = axios.put(`https://localhost:44347/api/Notes/Archive?NoteID=${id}`, null, header)
+    return response
+}
+
+export const setPin = (id) => {
+    let response = axios.put(`https://localhost:44347/api/Notes/Pin?NoteID=${id}`, null, header)
 }
