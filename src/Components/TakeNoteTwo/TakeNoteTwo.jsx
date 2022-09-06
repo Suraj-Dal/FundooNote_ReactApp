@@ -13,7 +13,7 @@ import ColorPopper from "../ColorPopper/ColorPopper";
 import { setNotes } from "../../Services/DataService";
 
 function TakeNoteTwo() {
-    const [noteObj, setNoteObj] = useState({Title:"", Description:"", Color:"", Archive:false, Pin:false})
+    const [noteObj, setNoteObj] = useState({Title:"", Description:"", Color:"", Archive:false, Pin:false, Trash: false})
     const takeName = (event) => {
         setNoteObj((prevState) => ({ ...prevState, Title: event.target.value }));
     };

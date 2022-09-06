@@ -7,10 +7,10 @@ const initialDrawerState = {
 export const drawerReducer = (state = initialDrawerState, action) => {
 	console.log(action)
 	switch (action.type) {
-		case 'SET_Title_as_Remainder':
+		case 'SET_Title_as_Reminder':
 			return {
 				...state,
-				title : "Remainder"
+				title : "Reminder"
 			};
             case 'SET_Title_as_Archive':
 			return {

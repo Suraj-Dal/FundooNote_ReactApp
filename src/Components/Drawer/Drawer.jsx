@@ -19,7 +19,11 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import {connect} from 'react-redux';
-
+import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 
 const drawerWidth = 240;
 
@@ -105,8 +109,26 @@ function MiniDrawer(props) {
     };
 
     const handleNotes = () => {
-        props.dispatch({type : "SET_Title_as_Archive"})
+        props.dispatch({type : "SET_Title_as_Notes"})
+        props.listenToDrawer("Notes")
     }
+
+    const handleArchive = () =>
+     {
+        props.dispatch({type : "SET_Title_as_Archive"})
+        props.listenToDrawer("Archive")
+     }
+
+     const handleReminder = () =>
+     {
+        props.dispatch({type : "SET_Title_as_Reminder"})
+     }
+
+     const handleTrash = () => 
+     {
+        props.dispatch({type : "SET_Title_as_Trash"})
+        props.listenToDrawer("Trash")
+     }
 
     return (
         <Box sx={{ display: 'flex' }}>
@@ -117,17 +139,34 @@ function MiniDrawer(props) {
                 <List>
                     <ListItem button onClick={handleNotes}>
                         <ListItemIcon>
-                            <img src="https://img.icons8.com/material-outlined/24/000000/light.png" style={{ width: "20px" }} />
+                            <LightbulbOutlinedIcon />
                         </ListItemIcon>
                         <ListItemText primary="Notes" />
                     </ListItem>
-                    <ListItem button >
+                    <ListItem button onClick={handleReminder}>
                         <ListItemIcon>
-                            <img src="https://img.icons8.com/material-outlined/24/000000/light.png" style={{ width: "20px" }} />
+                            <NotificationsNoneIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Notes" />
+                        <ListItemText primary="Reminders" />
                     </ListItem>
-
+                    <ListItem button>
+                        <ListItemIcon>
+                            <EditOutlinedIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Edit labels" />
+                    </ListItem>
+                    <ListItem button onClick={handleArchive}>
+                        <ListItemIcon>
+                            <ArchiveOutlinedIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Archive" />
+                    </ListItem>
+                    <ListItem button onClick={handleTrash}>
+                        <ListItemIcon>
+                           <DeleteOutlineIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Trash" />
+                    </ListItem>
                 </List>
             </Drawer>
 

@@ -31,7 +31,7 @@ function TakeNoteThree({note}) {
     {
         return (
             <div className="takenotethree" onMouseEnter={() => setViewNote(false)}>
-            <div className="notetnh" style={{backgroundColor: bgcolor}}>
+            <div className="notetnh" style={{backgroundColor: note.color}}>
                 <div className="titletnh">
                     <h4>{note.title}</h4>
                 </div>
@@ -44,7 +44,7 @@ function TakeNoteThree({note}) {
     {
         return (
             <div className="takenotethree" onMouseLeave={() => setViewNote(true)} >
-            <div className="notetnh" style={{backgroundColor: bgcolor}}>
+            <div className="notetnh" style={{backgroundColor: note.color}}>
                 <div className="titletnh">
                     <h4>{note.title}</h4>
                     <div className="pin"><PushPinOutlinedIcon fontSize="small" onClick={isPin}/></div>
